@@ -26,7 +26,7 @@ recommended to setup **logrotate** process to ensure log files do not consume
 the entire usable disk space.
 
 **cURL** is used to setup RabbitMQ bindings for various Cyclops services later 
-on. It is recommended to install it to avoide setup using the graphical 
+on. It is recommended to install it to avoid setup using the graphical 
 interface.
 
 System folders
@@ -53,7 +53,7 @@ service specific tables.
 
 ::
 
-  sudo -i -u postgres psql -c "alter system set idle_in_transaction_session_timeout='5min';"
+  sudo -i -u postgres psql -c "ALTER SYSTEM SET idle_in_transaction_session_timeout='5min';"
   sudo -i -u postgres psql -c "DROP USER IF EXISTS cyclops;"
   sudo -i -u postgres psql -c "CREATE USER cyclops WITH PASSWORD 'pass1234';"
   sudo -i -u postgres psql -c "ALTER USER cyclops CREATEDB;"
